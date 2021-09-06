@@ -10,3 +10,4 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then # do dangerous stuff
  chmod -R +x -- ./init
  sudo rm -r -f ./data/ ./drive/ ./record/ ./nginx/ssl/
 fi
+

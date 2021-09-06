@@ -60,7 +60,7 @@ services:
    volumes:
      - ./nginx/ssl/self.cert:/etc/nginx/ssl/self.cert:ro
      - ./nginx/ssl/self-ssl.key:/etc/nginx/ssl/self-ssl.key:ro
-     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+     #- ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
      - ./nginx/mysite.template:/etc/nginx/conf.d/default.conf:ro
    ports:
      - "443:443"
