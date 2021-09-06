@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dap
+spec:
+  rules:
+  - host: dap.cetcxl.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: dap-operate-platform
+          servicePort: 8080
+
