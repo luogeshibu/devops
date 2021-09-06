@@ -12,7 +12,7 @@ services:
     environment:
       TZ: Asia/Shanghai
 
-  # postgres
+  # postgres 
   postgres:
     container_name: postgres
     image: postgres
@@ -44,3 +44,14 @@ services:
     ports:
       - "8080:8080"
     restart: always
+
+
+##
+#docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgres > initdb.sql
+#docker cp initdb.sql postgres:/
+#docker exec -it postgres bash
+
+##in container postgres.####
+#su postgres
+#createdb guacamole_db
+#cat initdb.sql | psql -d guacamole_db -f -
