@@ -11,9 +11,7 @@ services:
     - "4822:4822"
     environment:
       TZ: Asia/Shanghai
-    volumes:
-    - ./drive:/drive:rw
-    - ./record:/record:rw
+
 
   # postgres 
   postgres:
@@ -22,13 +20,13 @@ services:
     restart: always
     environment:
       TZ: Asia/Shanghai
-      PGDATA: /var/lib/postgresql/data/guacamole
+      #PGDATA: /var/lib/postgresql/data/guacamole
+      #POSTGRES_HOST_AUTH_METHOD: trust
       POSTGRES_INITDB_ARGS: --auth-host=md5
       POSTGRES_DB: guacamole_db
       POSTGRES_PASSWORD: root
       POSTGRES_USER: postgres
     volumes:
-    - ./init:/docker-entrypoint-initdb.d:ro
     - ./data:/var/lib/postgresql/data:rw
 
   # guacamole
