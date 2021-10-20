@@ -50,22 +50,7 @@ services:
       - "8080:8080"
     restart: always
 
-########### optional ##############
-  # nginx
-  nginx:
-   container_name: nginx
-   restart: always
-   image: nginx
-   volumes:
-     - ./nginx/ssl/self.cert:/etc/nginx/ssl/self.cert:ro
-     - ./nginx/ssl/self-ssl.key:/etc/nginx/ssl/self-ssl.key:ro
-     #- ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-     - ./nginx/mysite.template:/etc/nginx/conf.d/default.conf:ro
-   ports:
-     - "443:443"
-   links:
-     - "guacamole"
-##
+##init postgres##
 #docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgres > initdb.sql
 #docker cp initdb.sql postgres:/
 #docker exec -it postgres bash
@@ -74,3 +59,8 @@ services:
 #su postgres
 #createdb guacamole_db
 #cat initdb.sql | psql -d guacamole_db -f -
+
+Verifying the Guacamole install
+#http://HOSTNAME:8080/guacamole/
+#username:guacadmin
+#password:guacadmin
