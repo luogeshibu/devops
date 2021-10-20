@@ -16,7 +16,7 @@ services:
   # postgres 
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:14
     restart: always
     environment:
       TZ: Asia/Shanghai
