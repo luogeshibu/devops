@@ -33,6 +33,7 @@ services:
   guacamole:
     image: guacamole/guacamole
     container_name: guacamole
+    restart: always
     depends_on:
       - guacd
       - postgres
@@ -48,7 +49,7 @@ services:
       - "postgres"
     ports:
       - "8080:8080"
-    restart: always
+
 
 ######init postgres#######
 #docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgres > initdb.sql
