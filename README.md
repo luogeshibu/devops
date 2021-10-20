@@ -1,7 +1,7 @@
 # Guacamole
 
 ### How to use
-- git clone "https://github.com/boschkundendienst/guacamole-docker-compose.git"
+- git clone "https://github.com/luogeshibu/devops.git"
 - cd guacamole-docker-compose
 - ./prepare.sh
 - docker-compose up -d
