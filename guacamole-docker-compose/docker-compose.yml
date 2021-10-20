@@ -23,6 +23,7 @@ services:
     environment:
       TZ: Asia/Shanghai
       PGDATA: /var/lib/postgresql/data/guacamole
+      POSTGRES_INITDB_ARGS: --auth-host=md5
       POSTGRES_DB: guacamole_db
       POSTGRES_PASSWORD: root
       POSTGRES_USER: postgres
