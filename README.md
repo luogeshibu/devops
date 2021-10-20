@@ -1,9 +1,10 @@
-# v2rayN
+# Guacamole
 
 ### How to use
-- If you are newbie please download v2rayN-Core.zip from releases
-- Otherwise please download v2rayN.zip (Also need to download v2ray core in the same folder)
-- Run v2rayN.exe
+- git clone "https://github.com/boschkundendienst/guacamole-docker-compose.git"
+- cd guacamole-docker-compose
+- ./prepare.sh
+- docker-compose up -d
 
 ### Requirements  
 - Microsoft [.NET Framework 4.6](https://docs.microsoft.com/zh-cn/dotnet/framework/install/guide-for-developers) or higher
