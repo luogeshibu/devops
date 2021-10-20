@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.9"
 
 
 services:
@@ -50,17 +50,19 @@ services:
       - "8080:8080"
     restart: always
 
-##init postgres##
+######init postgres#######
 #docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgres > initdb.sql
 #docker cp initdb.sql postgres:/
 #docker exec -it postgres bash
 
-##in container postgres.####
+##in container postgres.##
 #su postgres
 #createdb guacamole_db
 #cat initdb.sql | psql -d guacamole_db -f -
 
-Verifying the Guacamole install
+
+
+######Verifying the Guacamole install####
 #http://HOSTNAME:8080/guacamole/
 #username:guacadmin
 #password:guacadmin
