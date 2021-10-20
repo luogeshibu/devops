@@ -8,6 +8,6 @@ read -p "Are you sure? " -n 1 -r
 echo ""   # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then # do dangerous stuff
  chmod -R +x -- ./init
- sudo rm -r -f ./data/ ./drive/ ./record/ ./nginx/ssl/
+ sudo rm -r -f ./data/
 fi
 
