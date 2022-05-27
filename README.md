@@ -9,5 +9,5 @@
 
 
 ### Requirements  
-docker install 
-docker-compose install
+- docker install
+- docker-compose install
